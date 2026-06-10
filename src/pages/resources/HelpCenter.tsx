@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, MessageSquare, Mail, Video, Book, ChevronRight, ArrowRight } from 'lucide-react';
 import { PageHeader } from '../../components/PageHeader';

@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Camera, X } from 'lucide-react';
-import { Button } from '../Button';
+import { Camera } from 'lucide-react';
 
 interface ProfileSectionProps {
   user: {

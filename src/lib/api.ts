@@ -1,13 +1,12 @@
 import { supabase } from './supabase';
-import { Course } from '../types/course';
 
 export async function enrollInCourse(courseTitle: string) {
   try {
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const { data: { user }, error: authError } = await supabase!.auth.getUser();
     if (authError) throw authError;
     if (!user) throw new Error('User not authenticated');
 
-    const { data, error } = await supabase
+    const { data, error } = await supabase!
       .from('enrollments')
       .insert({
         user_id: user.id,
@@ -36,11 +35,11 @@ export async function enrollInCourse(courseTitle: string) {
 
 export async function addToWishlist(courseTitle: string) {
   try {
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const { data: { user }, error: authError } = await supabase!.auth.getUser();
     if (authError) throw authError;
     if (!user) throw new Error('User not authenticated');
 
-    const { data, error } = await supabase
+    const { data, error } = await supabase!
       .from('wishlists')
       .insert({
         user_id: user.id,
@@ -65,11 +64,11 @@ export async function addToWishlist(courseTitle: string) {
 
 export async function removeFromWishlist(courseTitle: string) {
   try {
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const { data: { user }, error: authError } = await supabase!.auth.getUser();
     if (authError) throw authError;
     if (!user) throw new Error('User not authenticated');
 
-    const { error } = await supabase
+    const { error } = await supabase!
       .from('wishlists')
       .delete()
       .match({ user_id: user.id, course_id: courseTitle });
@@ -84,11 +83,11 @@ export async function removeFromWishlist(courseTitle: string) {
 
 export async function getUserEnrollments() {
   try {
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const { data: { user }, error: authError } = await supabase!.auth.getUser();
     if (authError) throw authError;
     if (!user) throw new Error('User not authenticated');
 
-    const { data, error } = await supabase
+    const { data, error } = await supabase!
       .from('enrollments')
       .select('*')
       .eq('user_id', user.id);
@@ -103,11 +102,11 @@ export async function getUserEnrollments() {
 
 export async function getUserWishlist() {
   try {
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const { data: { user }, error: authError } = await supabase!.auth.getUser();
     if (authError) throw authError;
     if (!user) throw new Error('User not authenticated');
 
-    const { data, error } = await supabase
+    const { data, error } = await supabase!
       .from('wishlists')
       .select('*')
       .eq('user_id', user.id);
@@ -122,11 +121,11 @@ export async function getUserWishlist() {
 
 export async function updateCourseProgress(courseTitle: string, progress: number, currentModule: string) {
   try {
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const { data: { user }, error: authError } = await supabase!.auth.getUser();
     if (authError) throw authError;
     if (!user) throw new Error('User not authenticated');
 
-    const { data, error } = await supabase
+    const { data, error } = await supabase!
       .from('enrollments')
       .update({
         progress,

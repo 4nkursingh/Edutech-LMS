@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, BookOpen, Tag, Calendar, Clock } from 'lucide-react';
+import { Search, Filter, BookOpen } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 import { Section } from '../components/layout/Section';
 import { BlogCard } from '../components/blog/BlogCard';

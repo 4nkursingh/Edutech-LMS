@@ -1,9 +1,5 @@
-CourseOverview.tsx
-
-
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Users, Clock, CheckSquare } from 'lucide-react';
+import { CheckSquare } from 'lucide-react';
 import { Course } from '../../types/course';
 import { LearningObjectives } from './LearningObjectives';
 
@@ -45,7 +41,7 @@ interface CourseOverviewProps {
   course: Course;
 }
 
-export function CourseOverview({ course }: CourseOverviewProps) {
+export function CourseOverview({ }: CourseOverviewProps) {
   return (
     <div className="space-y-8">
       {/* Course Description */}

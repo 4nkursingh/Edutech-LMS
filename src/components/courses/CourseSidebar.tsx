@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Users, Star, GraduationCap, Heart, Share2, Download } from 'lucide-react';
 import { Course } from '../../types/course';
 import { Button } from '../Button';

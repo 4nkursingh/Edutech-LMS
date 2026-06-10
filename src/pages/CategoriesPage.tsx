@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Filter, ArrowRight, Users, Star, BookOpen, ChevronDown, Grid3X3, LayoutList } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Search, BookOpen, ChevronDown, Grid3X3, LayoutList } from 'lucide-react';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { PageHeader } from '../components/PageHeader';
 import { Section } from '../components/layout/Section';
 import { CategoryCard } from '../components/categories/CategoryCard';
 import { categories } from '../data/categories';
 import { courses } from '../data/courses';
-import { Button } from '../components/Button';
+
 
 type ViewMode = 'grid' | 'list';
 type SortOption = 'name' | 'courses' | 'popular';
 
 export function CategoriesPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedFilter, setSelectedFilter] = useState<'all' | 'popular' | 'new'>('all');
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [sortBy, setSortBy] = useState<SortOption>('name');
   const [showScrollToTop, setShowScrollToTop] = useState(false);

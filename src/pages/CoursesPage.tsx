@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { motion, AnimatePresence, LayoutGroup, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, LayoutGroup, useScroll, useSpring } from 'framer-motion';
 import {
   Search,
   SlidersHorizontal,
@@ -8,19 +8,16 @@ import {
   Users,
   Star,
   BookOpen,
-  GraduationCap,
-  TrendingUp,
   ChevronDown,
   Grid3X3,
   LayoutList,
-  Filter,
   X,
   Sparkles,
   BookMarked,
   Share2
 } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
-import { CourseCard } from '../components/CourseCard';
+
 import { courses } from '../data/courses';
 import { Button } from '../components/Button';
 import { cn } from '../utils/cn';
@@ -46,7 +43,7 @@ interface SavedFilter {
 }
 
 export function CoursesPage() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [showScrollToTop, setShowScrollToTop] = useState(false);

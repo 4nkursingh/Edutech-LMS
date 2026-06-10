@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Star } from 'lucide-react';
 
 // Mock reviews data
@@ -33,7 +33,7 @@ interface ReviewsProps {
   courseId: string;
 }
 
-export function Reviews({ courseId }: ReviewsProps) {
+export function Reviews({ }: ReviewsProps) {
   return (
     <div className="space-y-6">
       {mockReviews.map((review) => (

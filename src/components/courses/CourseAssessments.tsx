@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Target, Award, Timer, AlertTriangle } from 'lucide-react';
 import { Button } from '../Button';
@@ -119,7 +119,7 @@ const assessmentTypes = [
   }
 ];
 
-export function CourseAssessments({ courseId }: CourseAssessmentsProps) {
+export function CourseAssessments({ }: CourseAssessmentsProps) {
   const [selectedTest, setSelectedTest] = useState<any | null>(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [testToStart, setTestToStart] = useState<any | null>(null);

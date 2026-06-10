@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FooterSection } from './footer/FooterSection';
 import { NewsletterForm } from './footer/NewsletterForm';
 

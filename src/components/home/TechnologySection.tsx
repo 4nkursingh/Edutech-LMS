@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Code, Database, Layout, Smartphone, Cloud, Lock } from 'lucide-react';
 import { Section } from '../layout/Section';

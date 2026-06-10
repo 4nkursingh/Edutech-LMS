@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Star, Users, Award } from 'lucide-react';
 import { Section } from '../layout/Section';

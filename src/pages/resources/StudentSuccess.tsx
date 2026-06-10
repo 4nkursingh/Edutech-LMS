@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Book, Award, Target, Calendar, Clock, ChevronRight, Download, Play } from 'lucide-react';
 import { PageHeader } from '../../components/PageHeader';
@@ -180,10 +180,10 @@ export function StudentSuccess() {
                                 {resource.duration}
                               </span>
                             )}
-                            {resource.type === 'video' ? (
+                            {resource.type === 'video' && 'videoUrl' in resource ? (
                               <Button
                                 size="sm"
-                                onClick={() => setShowVideo(resource.videoUrl)}
+                                onClick={() => setShowVideo((resource as any).videoUrl)}
                               >
                                 <Play className="mr-2 h-4 w-4" />
                                 Watch Now

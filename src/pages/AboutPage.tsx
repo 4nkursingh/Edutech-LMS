@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { PageHeader } from '../components/PageHeader';
 import { Users, Target, Shield, Award } from 'lucide-react';
 

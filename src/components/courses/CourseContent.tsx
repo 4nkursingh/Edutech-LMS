@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp, Play, Lock, X, FileText, Video, CheckSquare, RefreshCw } from 'lucide-react';
+import { useState } from 'react';
+import { ChevronDown, ChevronUp, Lock, X, FileText, Video, CheckSquare, RefreshCw } from 'lucide-react';
 import { cn } from '../../utils/cn';
 import { Button } from '../Button';
 import { Quiz } from './Quiz';
@@ -224,7 +224,7 @@ function ContentModal({ lesson, onClose, onComplete, onRetake }: ContentModalPro
             questions={quiz.questions}
             onClose={onClose}
             onComplete={handleComplete}
-            isCompleted={isCompleted}
+            isCompleted={isCompleted ?? false}
             onRetake={handleRetake}
           />
         );

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Video, FileText, Code, Target, Play } from 'lucide-react';
 import { Button } from '../Button';
-import { cn } from '../../utils/cn';
 
 const courseCurriculum = [
   {

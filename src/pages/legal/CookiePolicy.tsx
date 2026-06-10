@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cookie, Settings, Shield, Activity, Bell, ChevronRight, Check } from 'lucide-react';
+import { Cookie, Settings, Shield, Activity, ChevronRight, Check } from 'lucide-react';
 import { PageHeader } from '../../components/PageHeader';
 import { Section } from '../../components/layout/Section';
 import { Button } from '../../components/Button';

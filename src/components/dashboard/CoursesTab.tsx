@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Search, Filter, Play, CheckCircle, Download, Heart } from 'lucide-react';
 import { Button } from '../Button';
 import { Course } from '../../types/course';

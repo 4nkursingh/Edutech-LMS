@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { TestimonialCard } from '../TestimonialCard';
 import { Section } from '../layout/Section';
 import { testimonials } from '../../data/testimonials';

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { CourseCard } from '../CourseCard';
 import { Section } from '../layout/Section';
 import { featuredCourses } from '../../data/courses';

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigate, useSearchParams } from 'react-router-dom';
-import { Star } from 'lucide-react';
+
 import { courses } from '../data/courses';
 import { getUserEnrollments, getUserWishlist } from '../lib/api';
 import { OverviewTab } from '../components/dashboard/OverviewTab';
@@ -123,7 +123,7 @@ export function DashboardPage() {
     alert(`Downloading invoice ${invoiceId}`);
   };
 
-  const resumeCourse = (courseTitle: string, module: string) => {
+  const resumeCourse = (courseTitle: string) => {
     // Navigate to the course page with the current module
     const courseUrl = `/courses/${courseTitle.toLowerCase().replace(/\s+/g, '-')}`;
     window.location.href = courseUrl;

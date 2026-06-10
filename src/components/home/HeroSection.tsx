@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, CheckCircle } from 'lucide-react';
 import { Button } from '../Button';
 import { SignUpForm } from '../auth/SignUpForm';
+import { SignInForm } from '../auth/SignInForm';
 
 const benefits = [
   'Access to 500+ courses',
@@ -13,6 +14,7 @@ const benefits = [
 
 export function HeroSection() {
   const [showSignUp, setShowSignUp] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const container = {
@@ -224,7 +226,8 @@ export function HeroSection() {
         </motion.div>
       )}
 
-      {showSignUp && <SignUpForm onClose={() => setShowSignUp(false)} />}
+      {showSignUp && <SignUpForm onClose={() => setShowSignUp(false)} onSwitchToSignIn={() => setShowSignIn(true)} />}
+      {showSignIn && <SignInForm onClose={() => setShowSignIn(false)} onSwitchToSignUp={() => setShowSignUp(true)} />}
     </section>
   );
 }
